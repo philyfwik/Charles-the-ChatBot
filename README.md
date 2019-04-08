@@ -70,7 +70,7 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 <h3>Key Features:</h3>
 
 Key features of this chatbot include:
-1. GUI with frame for user input, as well as a frame displaying message history. Also has scrollbar for easy navigation.
+1. GUI with frame for user input, as well as a frame displaying message history. Has unique window icon, instead of the generic tkinter icon. Also has scrollbar for easy navigation.
   - incomplete, as GUI only displays user input unto message history. It was fairly difficult and time consuming to connect and display live chatbot output console to the GUI, so the GUI code is commented out in convoDemo.py, but can be run in GUI.py to show functionality of its features.
 2. multiple topics of discussion (focuses on similar sports: football(soccer) and basketball, but accommodates discussion about pets and hobbies).
   - User:"who is your fave football player?" 
