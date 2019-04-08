@@ -3,6 +3,8 @@
 
 This chatbot will initiate a conversation with the user, interacting with them like a friend. It will be able to understand the gist of what the user is saying, and (hopefully) respond in an appropriate way.
 
+It focuses on 2 major sports, including football(soccer) and basketball, but can also discuss other topics like pets and hobbies.
+
 <h3>Dependencies:</h3>
 The NLTK Python library must first be downloaded. Installation instructions can be found <a href="https://www.nltk.org/install.html">here.</a>
 
@@ -16,6 +18,7 @@ nltk.download('wordnet')
 nltk.download('vader_lexicon')
 nltk.download('averaged_perceptron_tagger')
 ```
+Additional modules to be imported include spellchecker, tkinter and PIL
 
 <h3>Usage:</h3>
 
@@ -48,7 +51,7 @@ When using the `+` operator, the following 3 lines must start with `+` (positive
 
 
 
-<h3>Restrictions:</h3>
+<h3>Limitations:</h3>
 
 `convo.dat` file must begin with an empty line, and end with two empty lines.
 
@@ -64,18 +67,28 @@ If the `+` operator is used, the next 3 lines MUST start with each one of `+`, `
 
 
 
-<h3>Potential Updates:</h3>
+<h3>Key Features:</h3>
 
-1. Take context into account
-
-2. Create better correlation system
-
-3. Make bot able to give some suggested topics/questions for the user to ask.
-
-4. Make certain words weighted heavier (why, what, etc) when choosing topics
-
-5. Use first character of topics (. or ?) to weight responses
-
-6. Create and link non-CLI UI
-
-7. Allow wildcards in topic keywords (eg, 'fav*' matches fave, favorite, and favourite)
+Key features of this chatbot include:
+1. GUI with frame for user input, as well as a frame displaying message history. Also has scrollbar for easy navigation.
+  - incomplete, as GUI only displays user input unto message history. It was fairly difficult and time consuming to connect and display live chatbot output console to the GUI, so the GUI code is commented out in convoDemo.py, but can be run in GUI.py to show functionality of its features.
+2. multiple topics of discussion (focuses on similar sports: football(soccer) and basketball, but accommodates discussion about pets and hobbies).
+  - User:"who is your fave football player?" 
+  - Charles:my favorite football player is Cristiano Ronaldo!
+  - "who is your fave basketball player?"
+  - my favorite basketball player is Lebron James
+3. 8 reasonable responses to unrecognized user inputs. 5 for unrecognized statements and 3 for unrecognized questions. These responses are randomly selected to avoid repetition and encourage variety in conversation.
+  - "giddyup!"
+  - Not sure what that means, Ask me who my fave football player is!
+4. spellchecker that handles spelling mistakes and replaces misspelled word(s) with most likely match.
+  - "what do yuo like doing"
+  - I like talking to people like you!
+5. POS tagging to distinguish parts of speech and understand grammar.
+  - "what club do lebron play for?"
+  - he plays for Los Angeles Lakers!
+6. Sentiment analysis tool to distinguish between positive, negative and neutral inputs, and determine what chatbot replies.
+  - do you have any pets?
+  - "no"
+  - you can always adopt one!
+  - "oh"
+  - I think pets make the best companions, besides me of course!
